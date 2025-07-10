@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int tempo, velocidade;  
+    float distancia, litros_usados;
+    
+    printf("Calculadora de Consumo de Combustível\n");
+    printf("------------------------------------\n");
+    
+    printf("Digite o tempo gasto na viagem (horas): ");
+    while(scanf("%d", &tempo) != 1 || tempo <= 0) {
+        printf("Valor inválido! Digite um número positivo: ");
+        while(getchar() != '\n'); 
+    }
+    
+    printf("Digite a velocidade média (km/h, 1-300): ");
+    while(scanf("%d", &velocidade) != 1 || velocidade < 1 || velocidade > 300) {
+        printf("Valor inválido! Digite entre 1 e 300 km/h: ");
+        while(getchar() != '\n');
+    }
+    
+    distancia = tempo * velocidade;
+    litros_usados = distancia / 12.0;  
+    
+    printf("\nRELATÓRIO DA VIAGEM\n");
+    printf("------------------------------------\n");
+    printf("Tempo de viagem: %d horas\n", tempo);
+    printf("Velocidade média: %d km/h\n", velocidade);
+    printf("Distância percorrida: %.2f km\n", distancia);
+    printf("Combustível utilizado: %.2f litros\n", litros_usados);
+    printf("------------------------------------\n");
+    
+    return 0;
+}
