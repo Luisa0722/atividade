@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int nota;
+    
+    printf("Digite a nota do aluno (0-10): ");
+    
+    if (scanf("%d", &nota) != 1) {
+        printf("Erro: Por favor, digite um valor numérico válido.\n");
+        return 1;
+    }
+    
+    if (nota < 0 || nota > 10) {
+        printf("Erro: A nota deve estar entre 0 e 10.\n");
+        return 1;
+    }
+    
+    if (nota >= 9) {
+        printf("Excelente! Aprovado com nota %d\n", nota);
+    } 
+    else if (nota >= 7) {
+        printf("Aprovado com nota %d\n", nota);
+    } 
+    else if (nota >= 5) {
+        printf("Recuperação (nota %d)\n", nota);
+    } 
+    else {
+        printf("Reprovado com nota %d\n", nota);
+    }
+
+    return 0;
+}
