@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    printf("Contagem regressiva de 10 a 1:\n");
+    
+    for (int i = 10; i >= 1; i--) {
+        printf("%d ", i);  
+    }
+    
+    printf("\nFogo!\n");  
+    return 0;
+}
