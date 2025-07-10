@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int temp;
+    
+    printf("Digite a temperatura em graus Celsius: ");
+    
+    // Verifica se a leitura foi bem-sucedida
+    if (scanf("%d", &temp) != 1) {
+        printf("Erro: Por favor, digite um valor numérico válido.\n");
+        return 1;
+    }
+    
+    // Verifica condições extremas primeiro
+    if (temp <= -20) {
+        printf("Extremamente frio (%d°C)\n", temp);
+    } 
+    else if (temp < 15) {
+        printf("Frio (%d°C)\n", temp);
+    } 
+    else if (temp <= 25) {
+        printf("Agradável (%d°C)\n", temp);
+    } 
+    else if (temp <= 35) {
+        printf("Quente (%d°C)\n", temp);
+    } 
+    else {
+        printf("Extremamente quente (%d°C)\n", temp);
+    }
+
+    return 0;
+}
