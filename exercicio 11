@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, soma;
+    
+    printf("Calculadora de Soma\n");
+    printf("-------------------\n");
+    
+    printf("Digite o primeiro numero inteiro: ");
+    while (scanf("%d", &num1) != 1) {
+        printf("Entrada invalida. Digite um numero inteiro: ");
+        while (getchar() != '\n'); 
+    }
+    
+    printf("Digite o segundo numero inteiro: ");
+    while (scanf("%d", &num2) != 1) {
+        printf("Entrada invalida. Digite um numero inteiro: ");
+        while (getchar() != '\n'); 
+    }
+    
+    
+    soma = num1 + num2;
+    printf("\nResultado da Soma\n");
+    printf("-------------------\n");
+    printf("%d + %d = %d\n", num1, num2, soma);
+    
+    return 0;
+}
