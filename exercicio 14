@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int A, B;
+    
+    printf("Troca de Valores entre Variaveis\n");
+    printf("-------------------------------\n");
+    
+    printf("Digite o valor inteiro para A: ");
+    while(scanf("%d", &A) != 1) {
+        printf("Entrada invalida! Digite um numero inteiro para A: ");
+        while(getchar() != '\n'); 
+    }
+    
+    printf("Digite o valor inteiro para B: ");
+    while(scanf("%d", &B) != 1) {
+        printf("Entrada invalida! Digite um numero inteiro para B: ");
+        while(getchar() != '\n');
+    }
+    
+    printf("\nValores originais:\n");
+    printf("A = %d\n", A);
+    printf("B = %d\n", B);
+    
+    A = A ^ B;
+    B = A ^ B;
+    A = A ^ B;
+    
+    printf("\nValores apos a troca:\n");
+    printf("A = %d\n", A);
+    printf("B = %d\n", B);
+    
+    return 0;
+}
