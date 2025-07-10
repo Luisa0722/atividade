@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    
+    printf("Digite dois números inteiros (dividendo e divisor): ");
+    
+    // Verifica se a leitura foi bem-sucedida
+    if (scanf("%d %d", &a, &b) != 2) {
+        printf("Erro: Você deve digitar dois números inteiros.\n");
+        return 1;
+    }
+    
+    // Verifica divisão por zero primeiro
+    if (b == 0) {
+        printf("Erro: Divisão por zero não é permitida.\n");
+        return 1;
+    }
+    
+    // Verifica se a é divisível por b
+    if (a % b == 0) {
+        printf("%d é divisível por %d\n", a, b);
+        printf("Resultado da divisão: %d\n", a / b);
+    } else {
+        printf("%d não é divisível por %d\n", a, b);
+        printf("Resto da divisão: %d\n", a % b);
+    }
+
+    return 0;
+}
